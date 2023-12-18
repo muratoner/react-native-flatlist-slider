@@ -5,6 +5,8 @@ export default (Indicator = ({
   itemCount,
   currentIndex,
   indicatorStyle,
+  indicatorActiveStyle,
+  indicatorInActiveStyle,
   indicatorContainerStyle,
   indicatorActiveColor,
   indicatorInActiveColor,
@@ -16,6 +18,8 @@ export default (Indicator = ({
         itemCount,
         currentIndex,
         indicatorStyle,
+        indicatorActiveStyle,
+        indicatorInActiveStyle,
         indicatorActiveColor,
         indicatorInActiveColor,
         indicatorActiveWidth,
@@ -28,6 +32,8 @@ export const renderIndicator = (
   count,
   currentIndex,
   indicatorStyle,
+  indicatorActiveStyle,
+  indicatorInActiveStyle,
   indicatorActiveColor,
   indicatorInActiveColor,
   indicatorActiveWidth,
@@ -43,14 +49,19 @@ export const renderIndicator = (
             ? indicatorActiveColor
               ? {
                   ...styles.active,
+                  ...indicatorActiveStyle,
                   ...{
                     backgroundColor: indicatorActiveColor,
                     width: indicatorActiveWidth,
                   },
                 }
-              : styles.active
+              : {
+                ...styles.active,
+                ...indicatorActiveStyle
+              }
             : {
                 ...styles.inactive,
+                ...indicatorInActiveStyle,
                 ...{backgroundColor: indicatorInActiveColor},
               },
         ]}
