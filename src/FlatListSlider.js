@@ -24,6 +24,8 @@ export default class FlatListSlider extends Component {
     loop: true,
     indicator: true,
     indicatorStyle: {},
+    indicatorActiveStyle: {},
+    indicatorInActiveStyle: {},
     indicatorContainerStyle: {},
     indicatorActiveColor: '#3498db',
     indicatorInActiveColor: '#bdc3c7',
@@ -113,6 +115,8 @@ export default class FlatListSlider extends Component {
             itemCount={this.props.data.length}
             currentIndex={this.state.index % this.props.data.length}
             indicatorStyle={this.props.indicatorStyle}
+            indicatorInActiveStyle={this.props.indicatorInActiveStyle}
+            indicatorActiveStyle={this.props.indicatorActiveStyle}
             indicatorContainerStyle={[
               styles.indicatorContainerStyle,
               this.props.indicatorContainerStyle,
