@@ -96,7 +96,7 @@ npm i react-native-flatlist-slider
 | imageKey                | String       | ‘image'      | Key for image in object                            |
 | local                   | Boolean      | false        | Image to be loaded from URI or local               |
 | width                   | Number       | screenWidth  | Width of Item in list                              |
-| height                  | Number       | 230          | Height of Item in list                              |
+| height                  | Number       | 230          | Height of Item in list                             |
 | loop                    | Boolean      | true         | Enable infinite scroll for list                    |
 | separatorWidth          | Number       | 0            | Width of separator between list items              |
 | autoscroll              | Boolean      | true         | Enable autoScroll for list                         |
@@ -107,6 +107,8 @@ npm i react-native-flatlist-slider
 | currentIndexCallback    | Function     |              | Callback for image change with index               |
 | indicator               | Boolean      | true         | Flag to render indicator                           |
 | indicatorStyle          | Object       |              | Indicator Style                                    |
+| indicatorActiveStyle    | Object       |              | Indicator Active Style                             |
+| indicatorInActiveStyle  | Object       |              | Indicator InActive Style                           |
 | indicatorContainerStyle | Object       |              | Indicator Container Style                          |
 | indicatorActiveColor    | String       | '#3498db'    | Active indicator color                             |
 | indicatorInActiveColor  | String       | '#bdc3c7'    | Inactive indicator color                           |
